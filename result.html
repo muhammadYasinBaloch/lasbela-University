@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        if (menuToggle && navList) {
+            menuToggle.onclick = function() {
+                // Class toggle karein
+                navList.classList.toggle('active');
+                
+                // Icon change karein
+                if (navList.classList.contains('active')) {
+                    menuToggle.innerHTML = "✖";
+                } else {
+                    menuToggle.innerHTML = "☰";
+                }
+            };
+
+          
+            const links = navList.getElementsByTagName('a');
+            for (let i = 0; i < links.length; i++) {
+                links[i].onclick = function() {
+                    navList.classList.remove('active');
+                    menuToggle.innerHTML = "☰";
+                };
+            }
+        }
+    });
+</script>
+
+
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="nav-left">
+        <div class="logo">
+            <img src="./Adobe Express - file.png" alt="Logo"> 
+        </div>
+        <span class="site-text">LUAWMS Wadh Campus</span>
+    </div>
+
+    <ul class="nav-links" id="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./fee-details.html">fee-details</a></li>
+        <li><a href="./announcment.html">Announcements</a></li>
+      
+    </ul>
+
+    <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu">☰</button>
+</nav>
+
+<div class="container">
+<form class="result-form" id="resultForm">
+    <h2>View Result</h2>
+
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="text" id="roll" placeholder="Roll Number" required>
+    <input type="text" id="program" placeholder="Program" required>
+
+    <button type="submit">View Result</button>
+</form>
+</div>
+
+
+<div id="resultBox">
+    <h2>Result Details</h2>
+
+    <p><b>Name:</b> <span id="rName"></span></p>
+    <p><b>Roll No:</b> <span id="rRoll"></span></p>
+    <p><b>Program:</b> <span id="rProgram"></span></p>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Programming</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Mathematics</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>Database</td>
+            <td>88</td>
+        </tr>
+    </table>
+
+   
+    <h3 style="text-align:center;margin-top:20px;color:#2c3e50;">
+        CGPA: <span>3.45</span>
+        <br>
+        GPA: <span>3.45</span>
+    </h3>
+
+
+    <div style="text-align:center;margin-top:20px;">
+        <button style="
+            padding:12px 25px;
+            background:#2c3e50;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            Apply for DMC
+        </button>
+    </div>
+</div>
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>LUAWMS Wadh</h3>
+            <p>Empowering the youth of Balochistan through quality education and innovation in Agriculture, IT, and Education.</p>
+            <div class="social-links">
+                  <a href="https://www.facebook.com/luawms Sub-campus Wadh"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/+923324042186"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./fee-details.html">fee-details</a></li>
+                <li><a href="./announcment.html">Announcements</a></li>
+             
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Near RCD Road, Wadh, Balochistan</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+92 331 8484040</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@luawmswadh.edu.pk</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 LUAWMS Wadh Campus. All Rights Reserved. | Designed by [  Yasin Baloch ]</p>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+document.getElementById("resultForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Get values
+    const name = document.getElementById("name").value;
+    const roll = document.getElementById("roll").value;
+    const program = document.getElementById("program").value;
+
+    // Show in result
+    document.getElementById("rName").innerText = name;
+    document.getElementById("rRoll").innerText = roll;
+    document.getElementById("rProgram").innerText = program;
+
+    // Show result box
+    document.getElementById("resultBox").style.display = "block";
+
+    // Smooth scroll
+    document.getElementById("resultBox").scrollIntoView({
+        behavior:"smooth"
+    });
+});
+</script>
+
+</body>
+</html>

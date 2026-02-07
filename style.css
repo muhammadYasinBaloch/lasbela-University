@@ -754,3 +754,229 @@ iframe {
   }
 
 }
+
+
+/* 
+=========Result page===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+}
+
+
+
+.container{
+    padding:60px 20px;
+    margin-top: 50px;
+}
+
+.result-form{
+    background:white;
+    max-width:420px;
+    margin:auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.result-form h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.result-form input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.result-form button{
+    width:100%;
+    padding:12px;
+    background:#2c3e50;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.result-form button:hover{
+    background:black;
+}
+
+
+#resultBox{
+    display:none;
+    background:white;
+    max-width:650px;
+    margin:50px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#resultBox h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th, td{
+    padding:10px;
+    text-align:center;
+}
+
+
+
+
+/* ==================fee-details-page======== */
+
+
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+}
+
+
+
+.container{
+    margin-top: 50px;
+    padding:60px 20px;
+}
+
+.fee-form{
+    background:white;
+    max-width:420px;
+    margin:auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.fee-form h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.fee-form input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.fee-form button{
+    width:100%;
+    padding:12px;
+    background:#2c3e50;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.fee-form button:hover{
+    background:black;
+}
+
+
+#feeBox{
+    display:none;
+    background:white;
+    max-width:650px;
+    margin:50px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#feeBox h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th, td{
+    padding:10px;
+    text-align:center;
+}
+
+
+/* ===========Announcment-Page====== */
+
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+}
+
+
+
+
+.container{
+    padding:60px 20px;
+    margin-top: 50px;
+}
+
+.container h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.announcement-box{
+    background:white;
+    max-width:900px;
+    margin:20px auto;
+    padding:25px;
+    border-left:6px solid #2c3e50;
+    border-radius:8px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.announcement-box:hover{
+    transform:translateY(-5px);
+}
+
+.announcement-title{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.announcement-meta{
+    font-size:14px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+.announcement-box p{
+    line-height:1.6;
+}
+
+
+
+
